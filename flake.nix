@@ -8,12 +8,11 @@
     flake = false;
   };
 
-
   outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         version = "0.10.33";
-        pname = "SideQuest";
+        pname = "sidequest";
         pkgs = nixpkgs.legacyPackages."${system}";
         lib = pkgs.lib;
       in rec {
